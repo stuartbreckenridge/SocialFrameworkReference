@@ -1,5 +1,5 @@
 //
-//  TWBFirstViewController.h
+//  TWBTwitterViewController.h
 //  SocialFrameworkRef
 //
 //  Created by Stuart Breckenridge on 10/10/2013.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TWBFirstViewController : UIViewController
+@interface TWBTwitterViewController : UIViewController
 
 @end

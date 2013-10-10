@@ -14,14 +14,15 @@
 		DF58591A180622FB00087C88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF585919180622FB00087C88 /* main.m */; };
 		DF58591E180622FB00087C88 /* TWBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF58591D180622FB00087C88 /* TWBAppDelegate.m */; };
 		DF585921180622FB00087C88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF58591F180622FB00087C88 /* Main.storyboard */; };
-		DF585924180622FB00087C88 /* TWBFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF585923180622FB00087C88 /* TWBFirstViewController.m */; };
-		DF585927180622FB00087C88 /* TWBSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF585926180622FB00087C88 /* TWBSecondViewController.m */; };
+		DF585924180622FB00087C88 /* TWBTwitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF585923180622FB00087C88 /* TWBTwitterViewController.m */; };
+		DF585927180622FB00087C88 /* TWBFacebookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF585926180622FB00087C88 /* TWBFacebookViewController.m */; };
 		DF585929180622FB00087C88 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF585928180622FB00087C88 /* Images.xcassets */; };
 		DF585930180622FB00087C88 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF58592F180622FB00087C88 /* XCTest.framework */; };
 		DF585931180622FB00087C88 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF58590D180622FB00087C88 /* Foundation.framework */; };
 		DF585932180622FB00087C88 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF585911180622FB00087C88 /* UIKit.framework */; };
 		DF58593A180622FB00087C88 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DF585938180622FB00087C88 /* InfoPlist.strings */; };
 		DF58593C180622FB00087C88 /* SocialFrameworkRefTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF58593B180622FB00087C88 /* SocialFrameworkRefTests.m */; };
+		DF5859461806259500087C88 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = DF5859451806259500087C88 /* Readme.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,16 +47,17 @@
 		DF58591C180622FB00087C88 /* TWBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWBAppDelegate.h; sourceTree = "<group>"; };
 		DF58591D180622FB00087C88 /* TWBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TWBAppDelegate.m; sourceTree = "<group>"; };
 		DF585920180622FB00087C88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DF585922180622FB00087C88 /* TWBFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWBFirstViewController.h; sourceTree = "<group>"; };
-		DF585923180622FB00087C88 /* TWBFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TWBFirstViewController.m; sourceTree = "<group>"; };
-		DF585925180622FB00087C88 /* TWBSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWBSecondViewController.h; sourceTree = "<group>"; };
-		DF585926180622FB00087C88 /* TWBSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TWBSecondViewController.m; sourceTree = "<group>"; };
+		DF585922180622FB00087C88 /* TWBTwitterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWBTwitterViewController.h; sourceTree = "<group>"; };
+		DF585923180622FB00087C88 /* TWBTwitterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TWBTwitterViewController.m; sourceTree = "<group>"; };
+		DF585925180622FB00087C88 /* TWBFacebookViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWBFacebookViewController.h; sourceTree = "<group>"; };
+		DF585926180622FB00087C88 /* TWBFacebookViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TWBFacebookViewController.m; sourceTree = "<group>"; };
 		DF585928180622FB00087C88 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DF58592E180622FB00087C88 /* SocialFrameworkRefTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialFrameworkRefTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF58592F180622FB00087C88 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		DF585937180622FB00087C88 /* SocialFrameworkRefTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SocialFrameworkRefTests-Info.plist"; sourceTree = "<group>"; };
 		DF585939180622FB00087C88 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DF58593B180622FB00087C88 /* SocialFrameworkRefTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocialFrameworkRefTests.m; sourceTree = "<group>"; };
+		DF5859451806259500087C88 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				DF585935180622FB00087C88 /* SocialFrameworkRefTests */,
 				DF58590C180622FB00087C88 /* Frameworks */,
 				DF58590B180622FB00087C88 /* Products */,
+				DF5859451806259500087C88 /* Readme.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,10 +121,10 @@
 				DF58591C180622FB00087C88 /* TWBAppDelegate.h */,
 				DF58591D180622FB00087C88 /* TWBAppDelegate.m */,
 				DF58591F180622FB00087C88 /* Main.storyboard */,
-				DF585922180622FB00087C88 /* TWBFirstViewController.h */,
-				DF585923180622FB00087C88 /* TWBFirstViewController.m */,
-				DF585925180622FB00087C88 /* TWBSecondViewController.h */,
-				DF585926180622FB00087C88 /* TWBSecondViewController.m */,
+				DF585922180622FB00087C88 /* TWBTwitterViewController.h */,
+				DF585923180622FB00087C88 /* TWBTwitterViewController.m */,
+				DF585925180622FB00087C88 /* TWBFacebookViewController.h */,
+				DF585926180622FB00087C88 /* TWBFacebookViewController.m */,
 				DF585928180622FB00087C88 /* Images.xcassets */,
 				DF585914180622FB00087C88 /* Supporting Files */,
 			);
@@ -236,6 +239,7 @@
 			files = (
 				DF585929180622FB00087C88 /* Images.xcassets in Resources */,
 				DF585918180622FB00087C88 /* InfoPlist.strings in Resources */,
+				DF5859461806259500087C88 /* Readme.md in Resources */,
 				DF585921180622FB00087C88 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,9 +259,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF585927180622FB00087C88 /* TWBSecondViewController.m in Sources */,
+				DF585927180622FB00087C88 /* TWBFacebookViewController.m in Sources */,
 				DF58591E180622FB00087C88 /* TWBAppDelegate.m in Sources */,
-				DF585924180622FB00087C88 /* TWBFirstViewController.m in Sources */,
+				DF585924180622FB00087C88 /* TWBTwitterViewController.m in Sources */,
 				DF58591A180622FB00087C88 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  TWBSecondViewController.h
+//  TWBFacebookViewController.h
 //  SocialFrameworkRef
 //
 //  Created by Stuart Breckenridge on 10/10/2013.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TWBSecondViewController : UIViewController
+@interface TWBFacebookViewController : UIViewController
 
 @end

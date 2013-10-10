@@ -1,18 +1,18 @@
 //
-//  TWBSecondViewController.m
+//  TWBFacebookViewController.m
 //  SocialFrameworkRef
 //
 //  Created by Stuart Breckenridge on 10/10/2013.
 //  Copyright (c) 2013 TheWorkingBear. All rights reserved.
 //
 
-#import "TWBSecondViewController.h"
+#import "TWBFacebookViewController.h"
 
-@interface TWBSecondViewController ()
+@interface TWBFacebookViewController ()
 
 @end
 
-@implementation TWBSecondViewController
+@implementation TWBFacebookViewController
 
 - (void)viewDidLoad
 {
