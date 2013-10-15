@@ -8,6 +8,7 @@
 
 #import "TWBFacebookViewController.h"
 #import "TWBSocialHelper.h"
+#import "MBProgressHUD.h"
 
 @interface TWBFacebookViewController ()
 
@@ -17,6 +18,8 @@
  This UILabel displays the full name of the logged in Facebook user, if access has been granted. Otherwise, it defaults to "User Not Logged In".
  */
 @property (weak, nonatomic) IBOutlet UILabel *accountName;
+
+@property (nonatomic) MBProgressHUD *theHud;
 
 @end
 
@@ -31,8 +34,6 @@
                                              selector:@selector(updateAccountName)
                                                  name:@"ReadAccessGranted"
                                                object:nil];
-    
-    
     
     _localInstance = [TWBSocialHelper sharedHelper];
     
@@ -143,6 +144,8 @@
 
 -(IBAction)updateWallWithSLRequest
 {
+    [self showHud];
+    
     // Check that various permissions have been granted
     if (!_localInstance.readAccessGranted) {
         [_localInstance requestReadAccessToFacebook];
@@ -190,10 +193,10 @@
             NSLog(@"Status Code: %li", (long)[urlResponse statusCode]);
             NSLog(@"Response Data: %@", [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding]);
             
-            if (error) {
-                NSString *errorMessage = [error localizedDescription];
+            if (error)
+            {
                 NSLog(@"Error message: %@", [error localizedDescription]);
-                [self showAlertViewWithString:errorMessage];
+                [self showAlertViewWithString:[error localizedDescription]];
             }
             
             if ([urlResponse statusCode] == 200) {
@@ -202,9 +205,13 @@
             }
             
             if ([urlResponse statusCode] == 400) {
-                NSLog(@"The OAuth token has expired. Renewing Access Token. \nPlease Try Again.");
+                NSLog(@"The OAuth token has expired. Renewing Access Token.");
                 [_localInstance renewFacebookCredentials];
             }
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self hideHud];
+            });
         }];
         
         // Memory Management
@@ -224,10 +231,27 @@
 {
     //main thread
     dispatch_async(dispatch_get_main_queue(), ^{
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:[NSString stringWithFormat:@"%@", string] delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Result" message:[NSString stringWithFormat:@"%@", string] delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
         [alert show];
         alert = nil;
     });
+}
+
+#pragma mark - ProgressHud
+-(void)showHud
+{
+    if (_theHud == nil) {
+        _theHud = [[MBProgressHUD alloc] init];
+    }
+    
+    _theHud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    _theHud.labelFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:12.0];
+    _theHud.labelText = @"Posting";
+}
+
+-(void)hideHud
+{
+    [_theHud hide:YES];
 }
 
 - (void)didReceiveMemoryWarning

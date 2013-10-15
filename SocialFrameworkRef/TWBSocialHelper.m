@@ -17,7 +17,7 @@
  For Facebook SLRequest methods, each app needs a Facebook App ID. This can be setup at https://developers.facebook.com.
  The name of the app shows up on Facebook posts as "via <app name>".
  */
-#define kFacebookAppIdentifier @"xxxxxxxxxxxxxxxxx"
+#define kFacebookAppIdentifier @"xxxxxxxxxxxxx"
 
 @end
 
@@ -210,7 +210,7 @@
                                                    [self requestReadAccessToFacebook];
                                                }
                                                
-                                               NSLog(@"ACAccountCredentialRenewResult: %ld", renewResult);
+                                               NSLog(@"ACAccountCredentialRenewResult: %d", renewResult);
                                            }];
 }
 
