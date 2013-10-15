@@ -32,6 +32,7 @@
 		DF6408E0180B624C00E9470D /* TWBTweetObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6408DF180B624C00E9470D /* TWBTweetObject.m */; };
 		DF6408E4180B64D700E9470D /* TWBTwitterFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6408E3180B64D700E9470D /* TWBTwitterFriendsViewController.m */; };
 		DF6408E8180B662500E9470D /* TWBFriendsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6408E7180B662500E9470D /* TWBFriendsCell.m */; };
+		DF8556EB180D58DC0004F7C3 /* License.md in Resources */ = {isa = PBXBuildFile; fileRef = DF8556EA180D58DC0004F7C3 /* License.md */; };
 		DFCD1FD0180D2ED9009B8B96 /* TWBFlickrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCD1FCF180D2ED9009B8B96 /* TWBFlickrViewController.m */; };
 		DFDF161B180AD4FD00F1C27A /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DFDF161A180AD4FD00F1C27A /* MBProgressHUD.m */; };
 		DFE68D7E180A23DF00EF6C1B /* TWBSocialHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE68D7D180A23DF00EF6C1B /* TWBSocialHelper.m */; };
@@ -89,6 +90,7 @@
 		DF6408E3180B64D700E9470D /* TWBTwitterFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWBTwitterFriendsViewController.m; sourceTree = "<group>"; };
 		DF6408E6180B662500E9470D /* TWBFriendsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWBFriendsCell.h; sourceTree = "<group>"; };
 		DF6408E7180B662500E9470D /* TWBFriendsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWBFriendsCell.m; sourceTree = "<group>"; };
+		DF8556EA180D58DC0004F7C3 /* License.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.md; sourceTree = "<group>"; };
 		DFCD1FCE180D2ED9009B8B96 /* TWBFlickrViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWBFlickrViewController.h; sourceTree = "<group>"; };
 		DFCD1FCF180D2ED9009B8B96 /* TWBFlickrViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWBFlickrViewController.m; sourceTree = "<group>"; };
 		DFDF1619180AD4FD00F1C27A /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				DF58590C180622FB00087C88 /* Frameworks */,
 				DF58590B180622FB00087C88 /* Products */,
 				DF5859451806259500087C88 /* Readme.md */,
+				DF8556EA180D58DC0004F7C3 /* License.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -447,6 +450,7 @@
 				DF585918180622FB00087C88 /* InfoPlist.strings in Resources */,
 				DF5859461806259500087C88 /* Readme.md in Resources */,
 				DF585921180622FB00087C88 /* Main.storyboard in Resources */,
+				DF8556EB180D58DC0004F7C3 /* License.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
