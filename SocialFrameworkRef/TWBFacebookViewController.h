@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@import Social;
 
 @interface TWBFacebookViewController : UIViewController
 

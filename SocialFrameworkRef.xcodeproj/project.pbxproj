@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF153F30180AB6EB000AE3AF /* TWBTwitterAccountsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF153F2F180AB6EB000AE3AF /* TWBTwitterAccountsViewController.m */; };
+		DF153F33180AB803000AE3AF /* TWBTwitterAccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF153F32180AB803000AE3AF /* TWBTwitterAccountCell.m */; };
+		DF36D8DE180CD53E004B8DC7 /* TWBTwitterTimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF36D8DD180CD53E004B8DC7 /* TWBTwitterTimelineViewController.m */; };
+		DF36D8E2180CD659004B8DC7 /* TWBTweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF36D8E1180CD659004B8DC7 /* TWBTweetCell.m */; };
 		DF58590E180622FB00087C88 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF58590D180622FB00087C88 /* Foundation.framework */; };
 		DF585910180622FB00087C88 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF58590F180622FB00087C88 /* CoreGraphics.framework */; };
 		DF585912180622FB00087C88 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF585911180622FB00087C88 /* UIKit.framework */; };
@@ -23,6 +27,14 @@
 		DF58593A180622FB00087C88 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DF585938180622FB00087C88 /* InfoPlist.strings */; };
 		DF58593C180622FB00087C88 /* SocialFrameworkRefTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF58593B180622FB00087C88 /* SocialFrameworkRefTests.m */; };
 		DF5859461806259500087C88 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = DF5859451806259500087C88 /* Readme.md */; };
+		DF6408D7180B61DF00E9470D /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6408D6180B61DF00E9470D /* GTMNSString+HTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DF6408DB180B61FB00E9470D /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6408DA180B61FB00E9470D /* NSString+HTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DF6408E0180B624C00E9470D /* TWBTweetObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6408DF180B624C00E9470D /* TWBTweetObject.m */; };
+		DF6408E4180B64D700E9470D /* TWBTwitterFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6408E3180B64D700E9470D /* TWBTwitterFriendsViewController.m */; };
+		DF6408E8180B662500E9470D /* TWBFriendsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6408E7180B662500E9470D /* TWBFriendsCell.m */; };
+		DFCD1FD0180D2ED9009B8B96 /* TWBFlickrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCD1FCF180D2ED9009B8B96 /* TWBFlickrViewController.m */; };
+		DFDF161B180AD4FD00F1C27A /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DFDF161A180AD4FD00F1C27A /* MBProgressHUD.m */; };
+		DFE68D7E180A23DF00EF6C1B /* TWBSocialHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE68D7D180A23DF00EF6C1B /* TWBSocialHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +48,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF153F2E180AB6EB000AE3AF /* TWBTwitterAccountsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWBTwitterAccountsViewController.h; sourceTree = "<group>"; };
+		DF153F2F180AB6EB000AE3AF /* TWBTwitterAccountsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWBTwitterAccountsViewController.m; sourceTree = "<group>"; };
+		DF153F31180AB803000AE3AF /* TWBTwitterAccountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWBTwitterAccountCell.h; sourceTree = "<group>"; };
+		DF153F32180AB803000AE3AF /* TWBTwitterAccountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWBTwitterAccountCell.m; sourceTree = "<group>"; };
+		DF36D8DC180CD53E004B8DC7 /* TWBTwitterTimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWBTwitterTimelineViewController.h; sourceTree = "<group>"; };
+		DF36D8DD180CD53E004B8DC7 /* TWBTwitterTimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWBTwitterTimelineViewController.m; sourceTree = "<group>"; };
+		DF36D8E0180CD659004B8DC7 /* TWBTweetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWBTweetCell.h; sourceTree = "<group>"; };
+		DF36D8E1180CD659004B8DC7 /* TWBTweetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWBTweetCell.m; sourceTree = "<group>"; };
 		DF58590A180622FB00087C88 /* SocialFrameworkRef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialFrameworkRef.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF58590D180622FB00087C88 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DF58590F180622FB00087C88 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -58,6 +78,23 @@
 		DF585939180622FB00087C88 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DF58593B180622FB00087C88 /* SocialFrameworkRefTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocialFrameworkRefTests.m; sourceTree = "<group>"; };
 		DF5859451806259500087C88 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.md; sourceTree = "<group>"; };
+		DF6408D4180B61DF00E9470D /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		DF6408D5180B61DF00E9470D /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
+		DF6408D6180B61DF00E9470D /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
+		DF6408D9180B61FB00E9470D /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
+		DF6408DA180B61FB00E9470D /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
+		DF6408DE180B624C00E9470D /* TWBTweetObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWBTweetObject.h; sourceTree = "<group>"; };
+		DF6408DF180B624C00E9470D /* TWBTweetObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWBTweetObject.m; sourceTree = "<group>"; };
+		DF6408E2180B64D700E9470D /* TWBTwitterFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWBTwitterFriendsViewController.h; sourceTree = "<group>"; };
+		DF6408E3180B64D700E9470D /* TWBTwitterFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWBTwitterFriendsViewController.m; sourceTree = "<group>"; };
+		DF6408E6180B662500E9470D /* TWBFriendsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWBFriendsCell.h; sourceTree = "<group>"; };
+		DF6408E7180B662500E9470D /* TWBFriendsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWBFriendsCell.m; sourceTree = "<group>"; };
+		DFCD1FCE180D2ED9009B8B96 /* TWBFlickrViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWBFlickrViewController.h; sourceTree = "<group>"; };
+		DFCD1FCF180D2ED9009B8B96 /* TWBFlickrViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWBFlickrViewController.m; sourceTree = "<group>"; };
+		DFDF1619180AD4FD00F1C27A /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		DFDF161A180AD4FD00F1C27A /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		DFE68D7C180A23DF00EF6C1B /* TWBSocialHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWBSocialHelper.h; sourceTree = "<group>"; };
+		DFE68D7D180A23DF00EF6C1B /* TWBSocialHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWBSocialHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,9 +121,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF153F2C180AB6AB000AE3AF /* 1. Twitter Methods View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DF585922180622FB00087C88 /* TWBTwitterViewController.h */,
+				DF585923180622FB00087C88 /* TWBTwitterViewController.m */,
+			);
+			name = "1. Twitter Methods View Controller";
+			sourceTree = "<group>";
+		};
+		DF153F2D180AB6B6000AE3AF /* 2. Twitter Accounts View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DF153F2E180AB6EB000AE3AF /* TWBTwitterAccountsViewController.h */,
+				DF153F2F180AB6EB000AE3AF /* TWBTwitterAccountsViewController.m */,
+				DF153F34180AB806000AE3AF /* 2.1 Twitter Account Cell */,
+			);
+			name = "2. Twitter Accounts View Controller";
+			sourceTree = "<group>";
+		};
+		DF153F34180AB806000AE3AF /* 2.1 Twitter Account Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DF153F31180AB803000AE3AF /* TWBTwitterAccountCell.h */,
+				DF153F32180AB803000AE3AF /* TWBTwitterAccountCell.m */,
+			);
+			name = "2.1 Twitter Account Cell";
+			sourceTree = "<group>";
+		};
+		DF36D8DF180CD541004B8DC7 /* 4. Twitter Timeline View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DF36D8DC180CD53E004B8DC7 /* TWBTwitterTimelineViewController.h */,
+				DF36D8DD180CD53E004B8DC7 /* TWBTwitterTimelineViewController.m */,
+				DF36D8E3180CD65C004B8DC7 /* 4.1 Tweet Cell */,
+			);
+			name = "4. Twitter Timeline View Controller";
+			sourceTree = "<group>";
+		};
+		DF36D8E3180CD65C004B8DC7 /* 4.1 Tweet Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DF36D8E0180CD659004B8DC7 /* TWBTweetCell.h */,
+				DF36D8E1180CD659004B8DC7 /* TWBTweetCell.m */,
+			);
+			name = "4.1 Tweet Cell";
+			sourceTree = "<group>";
+		};
 		DF585901180622FB00087C88 = {
 			isa = PBXGroup;
 			children = (
+				DFDF161C180AD50200F1C27A /* Third Party Classes */,
 				DF585913180622FB00087C88 /* SocialFrameworkRef */,
 				DF585935180622FB00087C88 /* SocialFrameworkRefTests */,
 				DF58590C180622FB00087C88 /* Frameworks */,
@@ -121,10 +206,8 @@
 				DF58591C180622FB00087C88 /* TWBAppDelegate.h */,
 				DF58591D180622FB00087C88 /* TWBAppDelegate.m */,
 				DF58591F180622FB00087C88 /* Main.storyboard */,
-				DF585922180622FB00087C88 /* TWBTwitterViewController.h */,
-				DF585923180622FB00087C88 /* TWBTwitterViewController.m */,
-				DF585925180622FB00087C88 /* TWBFacebookViewController.h */,
-				DF585926180622FB00087C88 /* TWBFacebookViewController.m */,
+				DFE68D7F180A23E700EF6C1B /* Model */,
+				DFE68D79180A213400EF6C1B /* View Controllers */,
 				DF585928180622FB00087C88 /* Images.xcassets */,
 				DF585914180622FB00087C88 /* Supporting Files */,
 			);
@@ -158,6 +241,129 @@
 				DF585938180622FB00087C88 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DF6408D3180B61C200E9470D /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				DFDF1619180AD4FD00F1C27A /* MBProgressHUD.h */,
+				DFDF161A180AD4FD00F1C27A /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		DF6408D8180B61ED00E9470D /* GTMString */ = {
+			isa = PBXGroup;
+			children = (
+				DF6408D4180B61DF00E9470D /* GTMDefines.h */,
+				DF6408D5180B61DF00E9470D /* GTMNSString+HTML.h */,
+				DF6408D6180B61DF00E9470D /* GTMNSString+HTML.m */,
+			);
+			name = GTMString;
+			sourceTree = "<group>";
+		};
+		DF6408DC180B620000E9470D /* NSString+HTML */ = {
+			isa = PBXGroup;
+			children = (
+				DF6408D9180B61FB00E9470D /* NSString+HTML.h */,
+				DF6408DA180B61FB00E9470D /* NSString+HTML.m */,
+			);
+			name = "NSString+HTML";
+			sourceTree = "<group>";
+		};
+		DF6408DD180B623400E9470D /* TWB Social Helper */ = {
+			isa = PBXGroup;
+			children = (
+				DFE68D7C180A23DF00EF6C1B /* TWBSocialHelper.h */,
+				DFE68D7D180A23DF00EF6C1B /* TWBSocialHelper.m */,
+			);
+			name = "TWB Social Helper";
+			sourceTree = "<group>";
+		};
+		DF6408E1180B633400E9470D /* TWB Tweet Object */ = {
+			isa = PBXGroup;
+			children = (
+				DF6408DE180B624C00E9470D /* TWBTweetObject.h */,
+				DF6408DF180B624C00E9470D /* TWBTweetObject.m */,
+			);
+			name = "TWB Tweet Object";
+			sourceTree = "<group>";
+		};
+		DF6408E5180B64E600E9470D /* 3. Twitter Friends View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DF6408E2180B64D700E9470D /* TWBTwitterFriendsViewController.h */,
+				DF6408E3180B64D700E9470D /* TWBTwitterFriendsViewController.m */,
+				DF6408E9180B662A00E9470D /* 3.1 Twitter Friends Cell */,
+			);
+			name = "3. Twitter Friends View Controller";
+			sourceTree = "<group>";
+		};
+		DF6408E9180B662A00E9470D /* 3.1 Twitter Friends Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DF6408E6180B662500E9470D /* TWBFriendsCell.h */,
+				DF6408E7180B662500E9470D /* TWBFriendsCell.m */,
+			);
+			name = "3.1 Twitter Friends Cell";
+			sourceTree = "<group>";
+		};
+		DFCD1FD1180D2EE2009B8B96 /* Flickr */ = {
+			isa = PBXGroup;
+			children = (
+				DFCD1FCE180D2ED9009B8B96 /* TWBFlickrViewController.h */,
+				DFCD1FCF180D2ED9009B8B96 /* TWBFlickrViewController.m */,
+			);
+			name = Flickr;
+			sourceTree = "<group>";
+		};
+		DFDF161C180AD50200F1C27A /* Third Party Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DF6408DC180B620000E9470D /* NSString+HTML */,
+				DF6408D8180B61ED00E9470D /* GTMString */,
+				DF6408D3180B61C200E9470D /* MBProgressHUD */,
+			);
+			name = "Third Party Classes";
+			sourceTree = "<group>";
+		};
+		DFE68D79180A213400EF6C1B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DFE68D7A180A213F00EF6C1B /* Twitter */,
+				DFE68D7B180A214600EF6C1B /* Facebook */,
+				DFCD1FD1180D2EE2009B8B96 /* Flickr */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		DFE68D7A180A213F00EF6C1B /* Twitter */ = {
+			isa = PBXGroup;
+			children = (
+				DF153F2C180AB6AB000AE3AF /* 1. Twitter Methods View Controller */,
+				DF153F2D180AB6B6000AE3AF /* 2. Twitter Accounts View Controller */,
+				DF6408E5180B64E600E9470D /* 3. Twitter Friends View Controller */,
+				DF36D8DF180CD541004B8DC7 /* 4. Twitter Timeline View Controller */,
+			);
+			name = Twitter;
+			sourceTree = "<group>";
+		};
+		DFE68D7B180A214600EF6C1B /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				DF585925180622FB00087C88 /* TWBFacebookViewController.h */,
+				DF585926180622FB00087C88 /* TWBFacebookViewController.m */,
+			);
+			name = Facebook;
+			sourceTree = "<group>";
+		};
+		DFE68D7F180A23E700EF6C1B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DF6408DD180B623400E9470D /* TWB Social Helper */,
+				DF6408E1180B633400E9470D /* TWB Tweet Object */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,10 +465,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFE68D7E180A23DF00EF6C1B /* TWBSocialHelper.m in Sources */,
+				DF36D8DE180CD53E004B8DC7 /* TWBTwitterTimelineViewController.m in Sources */,
+				DF153F33180AB803000AE3AF /* TWBTwitterAccountCell.m in Sources */,
+				DF6408DB180B61FB00E9470D /* NSString+HTML.m in Sources */,
+				DF6408D7180B61DF00E9470D /* GTMNSString+HTML.m in Sources */,
 				DF585927180622FB00087C88 /* TWBFacebookViewController.m in Sources */,
 				DF58591E180622FB00087C88 /* TWBAppDelegate.m in Sources */,
+				DF6408E4180B64D700E9470D /* TWBTwitterFriendsViewController.m in Sources */,
+				DF36D8E2180CD659004B8DC7 /* TWBTweetCell.m in Sources */,
 				DF585924180622FB00087C88 /* TWBTwitterViewController.m in Sources */,
+				DF6408E8180B662500E9470D /* TWBFriendsCell.m in Sources */,
+				DFCD1FD0180D2ED9009B8B96 /* TWBFlickrViewController.m in Sources */,
+				DF153F30180AB6EB000AE3AF /* TWBTwitterAccountsViewController.m in Sources */,
 				DF58591A180622FB00087C88 /* main.m in Sources */,
+				DF6408E0180B624C00E9470D /* TWBTweetObject.m in Sources */,
+				DFDF161B180AD4FD00F1C27A /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +607,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SocialFrameworkRef/SocialFrameworkRef-Prefix.pch";
 				INFOPLIST_FILE = "SocialFrameworkRef/SocialFrameworkRef-Info.plist";
@@ -402,6 +621,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SocialFrameworkRef/SocialFrameworkRef-Prefix.pch";
 				INFOPLIST_FILE = "SocialFrameworkRef/SocialFrameworkRef-Info.plist";
@@ -471,6 +691,7 @@
 				DF585941180622FB00087C88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DF585942180622FB00087C88 /* Build configuration list for PBXNativeTarget "SocialFrameworkRefTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +700,7 @@
 				DF585944180622FB00087C88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
