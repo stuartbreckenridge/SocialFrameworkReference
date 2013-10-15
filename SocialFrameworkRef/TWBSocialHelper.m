@@ -15,7 +15,7 @@
 
 /**
  For Facebook SLRequest methods, each app needs a Facebook App ID. This can be setup at https://developers.facebook.com.
- The name of the app shows up on Facebook posts as "via <app name>".
+ The name of the app shows up on Facebook posts as "via <app name>". Replace xxxxxxxx below with your App ID.
  */
 #define kFacebookAppIdentifier @"xxxxxxxxxxxxx"
 
