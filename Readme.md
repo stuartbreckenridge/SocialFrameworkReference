@@ -52,7 +52,7 @@ This method downloads the current authenticated user's timeline (using the defau
 Facebook requires a separate read and write request to be made for each permission, in respect of methods using SLRequest. In TWBFacebookViewController's method a request is made for the read permission. Upon success of that method, a write request is made.
 
 ######Notes
-> For SLRequest methods a Facebook App Identifier is required. This needs to be setup at https://developers.facebook.com.
+> For SLRequest methods a Facebook App Identifier is required. This needs to be setup at https://developers.facebook.com. Additionally, the bundle ID of the app must match the bundle ID on the Facebook website.
 
 ####Facebook Methods
 #####Post Text with SLComposeViewController

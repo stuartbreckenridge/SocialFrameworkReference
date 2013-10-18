@@ -32,7 +32,7 @@
     return instance;
 }
 
--(id)initSingleton
+-(instancetype)initSingleton
 {
     self = [super init];
     
