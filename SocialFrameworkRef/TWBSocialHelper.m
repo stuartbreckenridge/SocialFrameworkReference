@@ -210,7 +210,7 @@
                                                    [self requestReadAccessToFacebook];
                                                }
                                                
-                                               NSLog(@"ACAccountCredentialRenewResult: %d", renewResult);
+                                               NSLog(@"ACAccountCredentialRenewResult: %ld", renewResult);
                                            }];
 }
 

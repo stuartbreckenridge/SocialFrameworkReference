@@ -32,13 +32,15 @@
 
 #pragma mark - Image Posting To Flickr With UIActivityViewController
 /**
- There are no Social Framework methods available for flickr. The alternative is to use UIActivityViewController, as is demonstrated below.
+ There are no public Social Framework methods available for Flickr. The alternative is to use UIActivityViewController, as is demonstrated below, which subsequently presents an SLComposeViewController.
+ @warning If there is no Flickr account setup, the UIActivityViewController appears with a cancel option only.
  */
 -(IBAction)postImageToFlickr:(id)sender
 {
     // Get the UIImage
     UIImage *flickrImage = [UIImage imageNamed:@"FlickrImage"];
-    NSArray *activityItems = @[flickrImage];
+    NSString *imageString = @"I love satay!";
+    NSArray *activityItems = @[flickrImage, imageString];
     
     UIActivityViewController *flickrController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
     
@@ -49,9 +51,12 @@
     }];
     
     flickrImage = nil;
+    imageString = nil;
     activityItems = nil;
     flickrController = nil;
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {
