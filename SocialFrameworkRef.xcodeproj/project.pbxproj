@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DF153F30180AB6EB000AE3AF /* TWBTwitterAccountsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF153F2F180AB6EB000AE3AF /* TWBTwitterAccountsViewController.m */; };
 		DF153F33180AB803000AE3AF /* TWBTwitterAccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF153F32180AB803000AE3AF /* TWBTwitterAccountCell.m */; };
+		DF28A70D187995B7002C47B0 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DF28A70C187995B7002C47B0 /* .gitignore */; };
 		DF36D8DE180CD53E004B8DC7 /* TWBTwitterTimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF36D8DD180CD53E004B8DC7 /* TWBTwitterTimelineViewController.m */; };
 		DF36D8E2180CD659004B8DC7 /* TWBTweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF36D8E1180CD659004B8DC7 /* TWBTweetCell.m */; };
 		DF58590E180622FB00087C88 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF58590D180622FB00087C88 /* Foundation.framework */; };
@@ -54,6 +55,7 @@
 		DF153F2F180AB6EB000AE3AF /* TWBTwitterAccountsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWBTwitterAccountsViewController.m; sourceTree = "<group>"; };
 		DF153F31180AB803000AE3AF /* TWBTwitterAccountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWBTwitterAccountCell.h; sourceTree = "<group>"; };
 		DF153F32180AB803000AE3AF /* TWBTwitterAccountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWBTwitterAccountCell.m; sourceTree = "<group>"; };
+		DF28A70C187995B7002C47B0 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = SocialFrameworkRef/.gitignore; sourceTree = "<group>"; };
 		DF36D8DC180CD53E004B8DC7 /* TWBTwitterTimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWBTwitterTimelineViewController.h; sourceTree = "<group>"; };
 		DF36D8DD180CD53E004B8DC7 /* TWBTwitterTimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWBTwitterTimelineViewController.m; sourceTree = "<group>"; };
 		DF36D8E0180CD659004B8DC7 /* TWBTweetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWBTweetCell.h; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				DF5859451806259500087C88 /* Readme.md */,
 				DF8556EA180D58DC0004F7C3 /* License.md */,
 				DFE69E4E1879605D00922284 /* .travis.yml */,
+				DF28A70C187995B7002C47B0 /* .gitignore */,
 			);
 			sourceTree = "<group>";
 		};
@@ -450,6 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFE69E4F1879605D00922284 /* .travis.yml in Resources */,
+				DF28A70D187995B7002C47B0 /* .gitignore in Resources */,
 				DF585929180622FB00087C88 /* Images.xcassets in Resources */,
 				DF585918180622FB00087C88 /* InfoPlist.strings in Resources */,
 				DF5859461806259500087C88 /* Readme.md in Resources */,
