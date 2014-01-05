@@ -1,5 +1,6 @@
 Readme
 -----------------------------
+[![Build Status](https://travis-ci.org/theworkingbear/SocialFrameworkReference.png?branch=master)](https://travis-ci.org/theworkingbear/SocialFrameworkReference)
 
 ##Introduction
 The aim of this demo app is to have a repository of all the common Social Framework methods. The app uses both SLComposeViewController, SLRequest and UIActivityViewController and supports Twitter, Facebook, and Flickr.
