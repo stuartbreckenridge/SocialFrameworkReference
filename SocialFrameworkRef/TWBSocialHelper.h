@@ -16,7 +16,7 @@
 /**
  This method creates a shared instance of the SocialHelper.
  */
-+(TWBSocialHelper *)sharedHelper;
++(instancetype)sharedHelper;
 
 // Public Methods related to Twitter //
 /**

@@ -23,7 +23,7 @@
 
 @implementation TWBSocialHelper
 
-+(TWBSocialHelper *)sharedHelper
++(instancetype)sharedHelper
 {
     static dispatch_once_t pred;
     static TWBSocialHelper *instance = nil;
@@ -140,8 +140,6 @@
     // Publish permissions will only be requested if read access has been granted, otherwise an alert will be generated.
     if (_readAccessGranted)
     {
-        
-        
         // Specify the permissions required
         NSArray *permissions = @[@"publish_stream"];
         
@@ -151,9 +149,6 @@
         facebookOptions = @{ACFacebookAppIdKey : kFacebookAppIdentifier,
                             ACFacebookAudienceKey :  ACFacebookAudienceFriends,
                             ACFacebookPermissionsKey : permissions};
-        
-        // Create an Account Store
-        //ACAccountStore *facebookAccountStore = [[ACAccountStore alloc] init];
         
         // Specify the Account Type
         ACAccountType *accountType = [[ACAccountType alloc] init];

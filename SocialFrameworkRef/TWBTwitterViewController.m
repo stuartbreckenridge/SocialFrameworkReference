@@ -194,10 +194,6 @@
              [self performSelectorOnMainThread:@selector(hideHud) withObject:nil waitUntilDone:NO];
              NSLog(@"There was an error:%@", [error localizedDescription]);
          }
-         // The output of the request is placed in the log.
-         //NSDictionary *jsonResponse = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:nil];
-         //NSLog(@"%@", jsonResponse);
-         
      }];
     
     // Memory Management
