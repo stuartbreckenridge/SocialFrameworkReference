@@ -36,6 +36,7 @@
 		DFCD1FD0180D2ED9009B8B96 /* TWBFlickrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCD1FCF180D2ED9009B8B96 /* TWBFlickrViewController.m */; };
 		DFDF161B180AD4FD00F1C27A /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DFDF161A180AD4FD00F1C27A /* MBProgressHUD.m */; };
 		DFE68D7E180A23DF00EF6C1B /* TWBSocialHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE68D7D180A23DF00EF6C1B /* TWBSocialHelper.m */; };
+		DFE69E4F1879605D00922284 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = DFE69E4E1879605D00922284 /* .travis.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		DFDF161A180AD4FD00F1C27A /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		DFE68D7C180A23DF00EF6C1B /* TWBSocialHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWBSocialHelper.h; sourceTree = "<group>"; };
 		DFE68D7D180A23DF00EF6C1B /* TWBSocialHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWBSocialHelper.m; sourceTree = "<group>"; };
+		DFE69E4E1879605D00922284 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 				DF58590B180622FB00087C88 /* Products */,
 				DF5859451806259500087C88 /* Readme.md */,
 				DF8556EA180D58DC0004F7C3 /* License.md */,
+				DFE69E4E1879605D00922284 /* .travis.yml */,
 			);
 			sourceTree = "<group>";
 		};
@@ -446,6 +449,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFE69E4F1879605D00922284 /* .travis.yml in Resources */,
 				DF585929180622FB00087C88 /* Images.xcassets in Resources */,
 				DF585918180622FB00087C88 /* InfoPlist.strings in Resources */,
 				DF5859461806259500087C88 /* Readme.md in Resources */,
