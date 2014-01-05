@@ -76,6 +76,6 @@ This method uses `SLComposeViewController` to present Apple's stock Facebook pos
 ---
 ### Changes
 1.0.2 (004)
-- Changed `+(TWBSharedHelper *)sharedHelper` to `+(instancetype)sharedHelper`
+- Changed `+(TWBSocialHelper *)sharedHelper` to `+(instancetype)sharedHelper`
 - Updates to Readme. 
 - Various NSLogs removed.
