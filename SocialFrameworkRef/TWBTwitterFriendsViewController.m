@@ -213,6 +213,7 @@ didFinishDownloadingToURL:(NSURL *)location
 {
     // Download Task
     //NSLog(@"Download Task");
+    [session invalidateAndCancel];
     NSData *imageData = [NSData dataWithContentsOfURL:location];
     UIImage *imageFromData = [UIImage imageWithData:imageData];
     [_downloadedImages insertObject:imageFromData atIndex:_downloadCount];
@@ -244,6 +245,7 @@ didFinishDownloadingToURL:(NSURL *)location
     
     imageFromData = nil;
     imageData = nil;
+    
 }
 - (IBAction)goBack:(id)sender {
     
@@ -291,6 +293,7 @@ expectedTotalBytes:(int64_t)expectedTotalBytes
 {
     
 }
+
 
 
 #pragma mark - Memory

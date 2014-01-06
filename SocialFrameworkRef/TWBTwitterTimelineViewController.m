@@ -224,6 +224,7 @@ didFinishDownloadingToURL:(NSURL *)location
 {
     // Download Task
     //NSLog(@"Download Task");
+    [session invalidateAndCancel];
     NSData *imageData = [NSData dataWithContentsOfURL:location];
     UIImage *imageFromData = [UIImage imageWithData:imageData];
     TWBTweetObject *obj = [_arrayOfTweets objectAtIndex:_downloadCount];
@@ -234,17 +235,8 @@ didFinishDownloadingToURL:(NSURL *)location
     
     if (_downloadCount <= [_arrayOfTweets count])
     {
-        [session invalidateAndCancel];
         [self downloadProfileImages];
     }
-    
-    else
-    {
-        [session invalidateAndCancel];
-    }
-    
-    
-    
 }
 
 #pragma mark - NSURLSessionDelegate

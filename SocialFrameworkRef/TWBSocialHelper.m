@@ -91,12 +91,12 @@
 // Facebook Methods
 -(void)requestReadAccessToFacebook
 {
-    
     // Specify the permissions required
     NSArray *permissions = @[@"read_stream", @"email"];
     
     // Specify the audience
-    NSDictionary *facebookOptions = @{ACFacebookAppIdKey : kFacebookAppIdentifier,
+    NSDictionary *facebookOptions = [NSDictionary new];
+    facebookOptions = @{ACFacebookAppIdKey : kFacebookAppIdentifier,
                         ACFacebookAudienceKey :  ACFacebookAudienceFriends,
                         ACFacebookPermissionsKey : permissions};
     
@@ -142,8 +142,8 @@
         NSArray *permissions = @[@"publish_stream"];
         
         // Specify the audience
-        
-        NSDictionary *facebookOptions = @{ACFacebookAppIdKey : kFacebookAppIdentifier,
+        NSDictionary *facebookOptions = [NSDictionary new];
+        facebookOptions = @{ACFacebookAppIdKey : kFacebookAppIdentifier,
                             ACFacebookAudienceKey :  ACFacebookAudienceFriends,
                             ACFacebookPermissionsKey : permissions};
         
@@ -201,7 +201,7 @@
                                                    [self requestReadAccessToFacebook];
                                                }
                                                
-                                               NSLog(@"ACAccountCredentialRenewResult: %li", renewResult);
+                                               NSLog(@"ACAccountCredentialRenewResult: %ld", (long)renewResult);
                                            }];
 }
 
