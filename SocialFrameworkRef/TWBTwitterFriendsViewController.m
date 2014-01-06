@@ -207,7 +207,8 @@
  * removed when the delegate message returns. URLSession:task:didCompleteWithError: will
  * still be called.
  */
-- (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask
+- (void)URLSession:(NSURLSession *)session
+      downloadTask:(NSURLSessionDownloadTask *)downloadTask
 didFinishDownloadingToURL:(NSURL *)location
 {
     // Download Task

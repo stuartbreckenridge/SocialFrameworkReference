@@ -197,9 +197,7 @@
         NSURLSession *downloadSession = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:downloadQueue];
         
         NSURLSessionDownloadTask *downloadTask = [downloadSession downloadTaskWithURL:t.profileImageURL];
-        
         [downloadTask resume];
-        t = nil;
     }
     
     else
@@ -209,6 +207,7 @@
             [self.tableView reloadData];
             _downloadCount = 0;
         });
+        
     }
 }
 
@@ -227,13 +226,25 @@ didFinishDownloadingToURL:(NSURL *)location
     //NSLog(@"Download Task");
     NSData *imageData = [NSData dataWithContentsOfURL:location];
     UIImage *imageFromData = [UIImage imageWithData:imageData];
-    
     TWBTweetObject *obj = [_arrayOfTweets objectAtIndex:_downloadCount];
     obj.profileImage = imageFromData;
     obj = nil;
     
     _downloadCount++;
-    [self downloadProfileImages];
+    
+    if (_downloadCount <= [_arrayOfTweets count])
+    {
+        [session invalidateAndCancel];
+        [self downloadProfileImages];
+    }
+    
+    else
+    {
+        [session invalidateAndCancel];
+    }
+    
+    
+    
 }
 
 #pragma mark - NSURLSessionDelegate

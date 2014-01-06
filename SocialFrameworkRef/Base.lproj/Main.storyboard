@@ -78,7 +78,6 @@
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
                                 <state key="normal" title="6. View Timeline With SLRequest"/>
                                 <connections>
-                                    <action selector="viewTimelineWithSLRequest:" destination="CZ4-MO-1fc" eventType="touchUpInside" id="Xhf-OJ-PCH"/>
                                     <segue destination="ESU-NY-b97" kind="modal" id="Cse-GI-eBM"/>
                                 </connections>
                             </button>

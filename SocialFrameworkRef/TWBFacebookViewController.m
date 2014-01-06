@@ -67,16 +67,12 @@
         
         // Set the completion handler to check the result of the post.
         [postToWallWithText setCompletionHandler:^(SLComposeViewControllerResult result){
-            NSString *output = [[NSString alloc] init];
-            
             switch (result) {
                 case SLComposeViewControllerResultCancelled:
-                    output = @"Post Cancelled";
-                    NSLog(@"Compose Result: %@", output);
+                    NSLog(@"Compose Result: Canelled");
                     break;
                 case SLComposeViewControllerResultDone:
-                    output = @"Post Done";
-                    NSLog(@"Compose Result: %@", output);
+                    NSLog(@"Compose Result: Done");
                 default:
                     break;
             }}];
@@ -113,16 +109,12 @@
         
         // Set the completion handler to check the result of the post.
         [postToWallWithTextAndImage setCompletionHandler:^(SLComposeViewControllerResult result){
-            NSString *output = [[NSString alloc] init];
-            
             switch (result) {
                 case SLComposeViewControllerResultCancelled:
-                    output = @"Post Cancelled";
-                    NSLog(@"Compose Result: %@", output);
+                    NSLog(@"Compose Result: Cancelled");
                     break;
                 case SLComposeViewControllerResultDone:
-                    output = @"Post Done";
-                    NSLog(@"Compose Result: %@", output);
+                    NSLog(@"Compose Result: Done");
                 default:
                     break;
             }}];

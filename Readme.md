@@ -79,3 +79,7 @@ This method uses `SLComposeViewController` to present Apple's stock Facebook pos
 - Changed `+(TWBSharedHelper *)sharedHelper` to `+(instancetype)sharedHelper`
 - Updates to Readme. 
 - Various NSLogs removed.
+
+1.0.3b1 (005)
+- Methods in `TWBTwitterViewController` are now using GCC Code Block Evaluation.
+- Resolved memory leak in `TWBTwitterTimelineViewController` by invalidating the `downloadSession` when all image downloads are complete.

@@ -96,8 +96,7 @@
     NSArray *permissions = @[@"read_stream", @"email"];
     
     // Specify the audience
-    NSDictionary *facebookOptions = [[NSDictionary alloc] init];
-    facebookOptions = @{ACFacebookAppIdKey : kFacebookAppIdentifier,
+    NSDictionary *facebookOptions = @{ACFacebookAppIdKey : kFacebookAppIdentifier,
                         ACFacebookAudienceKey :  ACFacebookAudienceFriends,
                         ACFacebookPermissionsKey : permissions};
     
@@ -106,8 +105,7 @@
     
     
     // Specify the Account Type
-    ACAccountType *accountType = [[ACAccountType alloc] init];
-    accountType = [_facebookAccountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierFacebook];
+    ACAccountType *accountType = [_facebookAccountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierFacebook];
     
     if (!accountType.accessGranted) {
         _readAccessGranted = NO;
@@ -145,14 +143,12 @@
         
         // Specify the audience
         
-        NSDictionary *facebookOptions = [[NSDictionary alloc] init];
-        facebookOptions = @{ACFacebookAppIdKey : kFacebookAppIdentifier,
+        NSDictionary *facebookOptions = @{ACFacebookAppIdKey : kFacebookAppIdentifier,
                             ACFacebookAudienceKey :  ACFacebookAudienceFriends,
                             ACFacebookPermissionsKey : permissions};
         
         // Specify the Account Type
-        ACAccountType *accountType = [[ACAccountType alloc] init];
-        accountType = [_facebookAccountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierFacebook];
+        ACAccountType *accountType = [_facebookAccountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierFacebook];
         
         if (!accountType.accessGranted) {
             _readAccessGranted = NO;
@@ -205,7 +201,7 @@
                                                    [self requestReadAccessToFacebook];
                                                }
                                                
-                                               NSLog(@"ACAccountCredentialRenewResult: %ld", renewResult);
+                                               NSLog(@"ACAccountCredentialRenewResult: %li", renewResult);
                                            }];
 }
 
