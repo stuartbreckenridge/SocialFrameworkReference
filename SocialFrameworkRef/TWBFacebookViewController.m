@@ -57,31 +57,35 @@
     // Confirm that a Facebook account exists
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
         // Create a compose view controller for the service type Facebook
-        SLComposeViewController *postToWallWithText = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+        SLComposeViewController *postToWallWithText = ({
         
-        // Set the text of the post
-        [postToWallWithText setInitialText:@"This is test post with text only."];
-        
-        // Display the post sheet to the user
-        [self presentViewController:postToWallWithText animated:YES completion:nil];
-        
-        // Set the completion handler to check the result of the post.
-        [postToWallWithText setCompletionHandler:^(SLComposeViewControllerResult result){
-            switch (result) {
-                case SLComposeViewControllerResultCancelled:
-                    NSLog(@"Compose Result: Canelled");
-                    break;
-                case SLComposeViewControllerResultDone:
-                    NSLog(@"Compose Result: Done");
-                default:
-                    break;
-            }}];
+            postToWallWithText = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+            
+            // Set the text of the post
+            [postToWallWithText setInitialText:@"This is test post with text only."];
+            
+            // Set the completion handler to check the result of the post.
+            [postToWallWithText setCompletionHandler:^(SLComposeViewControllerResult result){
+                switch (result) {
+                    case SLComposeViewControllerResultCancelled:
+                        NSLog(@"Compose Result: Canelled");
+                        break;
+                    case SLComposeViewControllerResultDone:
+                        NSLog(@"Compose Result: Done");
+                    default:
+                        break;
+                }}];
+            
+            // Display the post sheet to the user
+            [self presentViewController:postToWallWithText animated:YES completion:nil];
+            
+            postToWallWithText;
+        });
         
         // Memory Management
         postToWallWithText = nil;
     }
     
-    // If a Facebook account is not available to the app present a UIAlertView
     else
     {
         UIAlertView *facebookAlert = [[UIAlertView alloc] initWithTitle:@"Facebook Error" message:@"Access to the Facebook account has not been given; or there is no Facebook account available." delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
@@ -98,32 +102,36 @@
     // Confirm that a Facebook account exists
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
         // Create a compose view controller for the service type Facebook
-        SLComposeViewController *postToWallWithTextAndImage = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-        
-        // Set the text and image of the post
-        [postToWallWithTextAndImage setInitialText:@"This is test post with text and an image."];
-        [postToWallWithTextAndImage addImage:[UIImage imageNamed:@"Facebook"]];
-        
-        // Display the post sheet to the user
-        [self presentViewController:postToWallWithTextAndImage animated:YES completion:nil];
-        
-        // Set the completion handler to check the result of the post.
-        [postToWallWithTextAndImage setCompletionHandler:^(SLComposeViewControllerResult result){
-            switch (result) {
-                case SLComposeViewControllerResultCancelled:
-                    NSLog(@"Compose Result: Cancelled");
-                    break;
-                case SLComposeViewControllerResultDone:
-                    NSLog(@"Compose Result: Done");
-                default:
-                    break;
-            }}];
+        SLComposeViewController *postToWallWithTextAndImage = ({
+            
+            postToWallWithTextAndImage = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+            
+            // Set the text & Image of the post
+            [postToWallWithTextAndImage setInitialText:@"This is test post with text and an image."];
+            [postToWallWithTextAndImage addImage:[UIImage imageNamed:@"FlickrImage"]];
+            
+            // Set the completion handler to check the result of the post.
+            [postToWallWithTextAndImage setCompletionHandler:^(SLComposeViewControllerResult result){
+                switch (result) {
+                    case SLComposeViewControllerResultCancelled:
+                        NSLog(@"Compose Result: Canelled");
+                        break;
+                    case SLComposeViewControllerResultDone:
+                        NSLog(@"Compose Result: Done");
+                    default:
+                        break;
+                }}];
+            
+            // Display the post sheet to the user
+            [self presentViewController:postToWallWithTextAndImage animated:YES completion:nil];
+            
+            postToWallWithTextAndImage;
+        });
         
         // Memory Management
         postToWallWithTextAndImage = nil;
     }
     
-    // If a Facebook account is not available to the app present a UIAlertView
     else
     {
         UIAlertView *facebookAlert = [[UIAlertView alloc] initWithTitle:@"Facebook Error" message:@"Access to the Facebook account has not been given; or there is no Facebook account available." delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
@@ -150,72 +158,70 @@
     // Only if read and write permissions are granted is the post request performed
     if (_localInstance.readAccessGranted && _localInstance.writeAccessGranted)
     {
-        // Create an NSURL pointing the correct open graph end point
-        NSURL *postURL = [NSURL URLWithString:@"https://graph.facebook.com/me/feed"];
-        
-        // Create the post details
-        NSString *link = @"http://developer.apple.com/library/ios/#documentation/Social/Reference/Social_Framework/_index.html%23//apple_ref/doc/uid/TP40012233";
-        NSString *message = @"Testing Social Framework Reference for iOS 7";
-        NSString *picture = @"http://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/150px-Apple_logo_black.svg.png";
-        NSString *name = @"Social Framework";
-        NSString *caption = @"Reference Documentation";
-        NSString *description = @"The Social framework lets you integrate your app with supported social networking services. On iOS and OS X, this framework provides a template for creating HTTP requests. On iOS only, the Social framework provides a generalized interface for posting requests on behalf of the user.";
-        
-        // Create a dictionary of post elements
-        NSDictionary *postDict = @{
-                                   @"link": link,
-                                   @"message" : message,
-                                   @"picture" : picture,
-                                   @"name" : name,
-                                   @"caption" : caption,
-                                   @"description" : description
-                                   };
-        
         // Create the SLRequest
-        SLRequest *postToMyWall = [SLRequest requestForServiceType:SLServiceTypeFacebook
-                                                     requestMethod:SLRequestMethodPOST
-                                                               URL:postURL
-                                                        parameters:postDict];
-        
-        // Set the account
-        [postToMyWall setAccount:_localInstance.facebookAccount];
-        
-        [postToMyWall performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
-            // Check for errors, output in alertview
-            NSLog(@"Status Code: %li", (long)[urlResponse statusCode]);
-            NSLog(@"Response Data: %@", [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding]);
+        SLRequest *postToMyWall = ({
+            // Create an NSURL pointing the correct open graph end point
+            NSURL *postURL = [NSURL URLWithString:@"https://graph.facebook.com/me/feed"];
             
-            if (error)
-            {
-                NSLog(@"Error message: %@", [error localizedDescription]);
-                [self showAlertViewWithString:[error localizedDescription]];
-            }
+            // Create the post details
+            NSString *link = @"https://github.com/theworkingbear/SocialFrameworkReference";
+            NSString *message = @"Testing Social Framework Reference for iOS 7";
+            NSString *picture = @"http://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/150px-Apple_logo_black.svg.png";
+            NSString *name = @"Social Framework";
+            NSString *caption = @"GitHub";
+            NSString *description = @"The Social framework lets you integrate your app with supported social networking services. On iOS and OS X, this framework provides a template for creating HTTP requests. On iOS only, the Social framework provides a generalized interface for posting requests on behalf of the user.";
             
-            if ([urlResponse statusCode] == 200) {
-                NSString *successMessage = @"The post has been made successfully.";
-                [self showAlertViewWithString:successMessage];
-            }
+            // Create a dictionary of post elements
+            NSDictionary *postDict = @{
+                                       @"link": link,
+                                       @"message" : message,
+                                       @"picture" : picture,
+                                       @"name" : name,
+                                       @"caption" : caption,
+                                       @"description" : description
+                                       };
+
             
-            if ([urlResponse statusCode] == 400) {
-                NSLog(@"The OAuth token has expired. Renewing Access Token.");
-                [_localInstance renewFacebookCredentials];
-            }
+            postToMyWall = [SLRequest requestForServiceType:SLServiceTypeFacebook
+                               requestMethod:SLRequestMethodPOST
+                                         URL:postURL
+                                  parameters:postDict];
             
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self hideHud];
-            });
-        }];
+            // Set the account
+            [postToMyWall setAccount:_localInstance.facebookAccount];
+            
+            [postToMyWall performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
+                // Check for errors, output in alertview
+                NSLog(@"Status Code: %li", (long)[urlResponse statusCode]);
+                NSLog(@"Response Data: %@", [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding]);
+                
+                if (error)
+                {
+                    NSLog(@"Error message: %@", [error localizedDescription]);
+                    [self showAlertViewWithString:[error localizedDescription]];
+                }
+                
+                if ([urlResponse statusCode] == 200) {
+                    NSString *successMessage = @"The post has been made successfully.";
+                    [self showAlertViewWithString:successMessage];
+                }
+                
+                if ([urlResponse statusCode] == 400) {
+                    NSLog(@"The OAuth token has expired. Renewing Access Token.");
+                    [_localInstance renewFacebookCredentials];
+                }
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self hideHud];
+                });
+            }];
+            
+            postToMyWall;
+        });
         
         // Memory Management
         postToMyWall = nil;
-        postDict = nil;
-        postURL = nil;
-        link = nil;
-        message = nil;
-        picture = nil;
-        name = nil;
-        caption = nil;
-        description = nil;
+        
     }
 }
 

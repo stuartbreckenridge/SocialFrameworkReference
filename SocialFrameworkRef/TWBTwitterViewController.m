@@ -114,7 +114,6 @@
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
         // Create a compose view controller for the service type Twitter
         SLComposeViewController *postTweetWithTextAndImage = ({
-            
             // Create a compose view controller for the service type Twitter
             postTweetWithTextAndImage = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
             

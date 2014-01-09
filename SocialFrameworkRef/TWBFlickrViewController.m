@@ -37,22 +37,24 @@
  */
 -(IBAction)postImageToFlickr:(id)sender
 {
-    // Get the UIImage
-    UIImage *flickrImage = [UIImage imageNamed:@"FlickrImage"];
-    NSString *imageString = @"I love satay!";
-    NSArray *activityItems = @[flickrImage, imageString];
+    UIActivityViewController *flickrController = ({
+        // Get the UIImage
+        UIImage *flickrImage = [UIImage imageNamed:@"FlickrImage"];
+        NSString *imageString = @"I love satay!";
+        NSArray *activityItems = @[flickrImage, imageString];
+        
+        flickrController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
     
-    UIActivityViewController *flickrController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
-    
-    flickrController.excludedActivityTypes = @[UIActivityTypePrint, UIActivityTypeCopyToPasteboard, UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll, UIActivityTypeAddToReadingList, UIActivityTypeMail, UIActivityTypeMessage, UIActivityTypePostToFacebook, UIActivityTypePostToTencentWeibo, UIActivityTypePostToTwitter, UIActivityTypePostToVimeo, UIActivityTypePostToWeibo, UIActivityTypeAirDrop];
+        flickrController.excludedActivityTypes = @[UIActivityTypePrint, UIActivityTypeCopyToPasteboard, UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll, UIActivityTypeAddToReadingList, UIActivityTypeMail, UIActivityTypeMessage, UIActivityTypePostToFacebook, UIActivityTypePostToTencentWeibo, UIActivityTypePostToTwitter, UIActivityTypePostToVimeo, UIActivityTypePostToWeibo, UIActivityTypeAirDrop];
+        
+        flickrController;
+    });
     
     [self presentViewController:flickrController animated:YES completion:^{
         //
     }];
-    
-    flickrImage = nil;
-    imageString = nil;
-    activityItems = nil;
+
+    // Memory Management
     flickrController = nil;
 }
 
