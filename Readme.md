@@ -73,13 +73,4 @@ There are no `SLComposeViewController` methods available for Flickr. The alterna
 #####Post an Image with UIActivityViewController
 This method uses `SLComposeViewController` to present Apple's stock Facebook post sheet for posting to Facebook.
 
----
-### Changes
-1.0.2 (004)
-- Changed `+(TWBSocialHelper *)sharedHelper` to `+(instancetype)sharedHelper`
-- Updates to Readme. 
-- Various NSLogs removed.
 
-1.0.3b1 (005)
-- Methods in `TWBTwitterViewController` are now using GCC Code Block Evaluation.
-- Resolved memory leak in `TWBTwitterTimelineViewController` by invalidating the `downloadSession` when all image downloads are complete.
