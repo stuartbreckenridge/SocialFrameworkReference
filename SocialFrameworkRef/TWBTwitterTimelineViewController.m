@@ -19,16 +19,15 @@
 /**
  arrayOfTweets contains all downloaded tweets that are each stored in a TWBTweetObject
  */
-@property (nonatomic) NSMutableArray *arrayOfTweets;
+@property (nonatomic) NSMutableArray  *arrayOfTweets;
 
 /**
  The downloadCount is used as a counter to ensure that all profile images are downloaded before reloading the tableView.
  */
 @property int downloadCount;
 
-
 @property (nonatomic) TWBSocialHelper *localInstance;
-@property (nonatomic) MBProgressHUD *theHud;
+@property (nonatomic) MBProgressHUD   *theHud;
 
 @end
 
@@ -77,24 +76,24 @@
 
 - (TWBTweetCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    TWBTweetCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    cell.theTweet.text = nil;
-    
-    TWBTweetObject *theTweet = [_arrayOfTweets objectAtIndex:indexPath.row];
-    
-    cell.theTweet.text = theTweet.tweetString;
-    cell.theAuthorFullName.text = theTweet.tweetRealName;
-    cell.theAuthorUserName.text = [NSString stringWithFormat:@"@%@",theTweet.tweetUserName];
-    
+    static NSString *CellIdentifier  = @"Cell";
+    TWBTweetCell *cell               = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+
+    cell.theTweet.text               = nil;
+
+    TWBTweetObject *theTweet         = [_arrayOfTweets objectAtIndex:indexPath.row];
+
+    cell.theTweet.text               = theTweet.tweetString;
+    cell.theAuthorFullName.text      = theTweet.tweetRealName;
+    cell.theAuthorUserName.text      = [NSString stringWithFormat:@"@%@",theTweet.tweetUserName];
+
     if (theTweet.profileImage) {
-        cell.theAuthorProfileImage.image = theTweet.profileImage;
+    cell.theAuthorProfileImage.image = theTweet.profileImage;
     } else
     {
-        cell.theAuthorProfileImage.image = [UIImage imageNamed:@"TwitterBar"];
+    cell.theAuthorProfileImage.image = [UIImage imageNamed:@"TwitterBar"];
     }
-    
+
     return cell;
 }
 
@@ -115,18 +114,18 @@
 {
     [self showHud];
     
-    _arrayOfTweets = [[NSMutableArray alloc] init];
-    
-    NSURL *timelineURL = [NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/home_timeline.json"];
-    
-    NSDictionary *params = @{@"count": @"50"};
-    
+    _arrayOfTweets             = [[NSMutableArray alloc] init];
+
+    NSURL *timelineURL         = [NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/home_timeline.json"];
+
+    NSDictionary *params       = @{@"count": @"50"};
+
     // Create a request
     SLRequest *getUserTimeline = [SLRequest requestForServiceType:SLServiceTypeTwitter
                                                     requestMethod:SLRequestMethodGET
                                                               URL:timelineURL
                                                        parameters:params];
-    
+
     // Set the account for the request
     [getUserTimeline setAccount:_localInstance.twitterAccount];
     
@@ -148,30 +147,30 @@
             for (NSDictionary *dictionary in jsonResponse)
             {
                 // Get the tweet text
-                NSString *tweetText = [dictionary objectForKey:@"text"];
+                NSString *tweetText         = [dictionary objectForKey:@"text"];
                 // Decode the tweet
-                NSString *decodedTweet = [tweetText stringByDecodingHTMLEntities];
-                
+                NSString *decodedTweet      = [tweetText stringByDecodingHTMLEntities];
+
                 // Get the user details
-                NSDictionary *user = [dictionary objectForKey:@"user"];
-                NSString *name = [user objectForKey:@"name"];
-                NSString *screenName = [user objectForKey:@"screen_name"];
-                NSString *profileImage = [user objectForKey:@"profile_image_url"];
-                NSString *highResImage = [profileImage stringByReplacingOccurrencesOfString:@"normal" withString:@"bigger"];
-                
+                NSDictionary *user          = [dictionary objectForKey:@"user"];
+                NSString *name              = [user objectForKey:@"name"];
+                NSString *screenName        = [user objectForKey:@"screen_name"];
+                NSString *profileImage      = [user objectForKey:@"profile_image_url"];
+                NSString *highResImage      = [profileImage stringByReplacingOccurrencesOfString:@"normal" withString:@"bigger"];
+
                 TWBTweetObject *tweetObject = [[TWBTweetObject alloc] init];
-                tweetObject.tweetString = decodedTweet;
-                tweetObject.tweetUserName = screenName;
-                tweetObject.tweetRealName = name;
+                tweetObject.tweetString     = decodedTweet;
+                tweetObject.tweetUserName   = screenName;
+                tweetObject.tweetRealName   = name;
                 tweetObject.profileImageURL = [NSURL URLWithString:highResImage];
                 [_arrayOfTweets addObject:tweetObject];
-                
-                tweetObject = nil;
-                user = nil;
-                name = nil;
-                screenName = nil;
-                profileImage = nil;
-                highResImage = nil;
+
+                tweetObject                 = nil;
+                user                        = nil;
+                name                        = nil;
+                screenName                  = nil;
+                profileImage                = nil;
+                highResImage                = nil;
             }
             
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -192,10 +191,10 @@
 {
     if (_downloadCount < [_arrayOfTweets count])
     {
-        TWBTweetObject *t = [_arrayOfTweets objectAtIndex:_downloadCount];
-        NSOperationQueue *downloadQueue = [NSOperationQueue new];
-        NSURLSession *downloadSession = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:downloadQueue];
-        
+        TWBTweetObject *t                      = [_arrayOfTweets objectAtIndex:_downloadCount];
+        NSOperationQueue *downloadQueue        = [NSOperationQueue new];
+        NSURLSession *downloadSession          = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:downloadQueue];
+
         NSURLSessionDownloadTask *downloadTask = [downloadSession downloadTaskWithURL:t.profileImageURL];
         [downloadTask resume];
     }
@@ -225,14 +224,14 @@ didFinishDownloadingToURL:(NSURL *)location
     // Download Task
     //NSLog(@"Download Task");
     [session invalidateAndCancel];
-    NSData *imageData = [NSData dataWithContentsOfURL:location];
+    NSData *imageData      = [NSData dataWithContentsOfURL:location];
     UIImage *imageFromData = [UIImage imageWithData:imageData];
-    TWBTweetObject *obj = [_arrayOfTweets objectAtIndex:_downloadCount];
-    obj.profileImage = imageFromData;
-    obj = nil;
-    
+    TWBTweetObject *obj    = [_arrayOfTweets objectAtIndex:_downloadCount];
+    obj.profileImage       = imageFromData;
+    obj                    = nil;
+
     _downloadCount++;
-    
+
     if (_downloadCount <= [_arrayOfTweets count])
     {
         [self downloadProfileImages];
@@ -265,10 +264,10 @@ expectedTotalBytes:(int64_t)expectedTotalBytes
 -(void)showHud
 {
     if (_theHud == nil) {
-        _theHud = [[MBProgressHUD alloc] init];
+    _theHud           = [[MBProgressHUD alloc] init];
     }
-    
-    _theHud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+
+    _theHud           = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     _theHud.labelFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:12.0];
     _theHud.labelText = @"Downloading Timeline";
 }

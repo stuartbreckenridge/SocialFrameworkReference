@@ -16,12 +16,9 @@
 /**
  UIButton used for selecting the specific Twitter Account that the user wants to use.
  */
-@property (nonatomic, weak) IBOutlet UIButton *accountSelector;
-
-@property (nonatomic) TWBSocialHelper *localInstance;
-
-@property (nonatomic) MBProgressHUD *theHud;
-
+@property (nonatomic, weak) IBOutlet UIButton * accountSelector;
+@property (nonatomic, strong) TWBSocialHelper * localInstance;
+@property (nonatomic, strong) MBProgressHUD   * theHud;
 
 @end
 

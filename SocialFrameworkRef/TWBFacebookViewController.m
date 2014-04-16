@@ -17,9 +17,8 @@
 /**
  This UILabel displays the full name of the logged in Facebook user, if access has been granted. Otherwise, it defaults to "User Not Logged In".
  */
-@property (weak, nonatomic) IBOutlet UILabel *accountName;
-
-@property (nonatomic) MBProgressHUD *theHud;
+@property (weak, nonatomic  ) IBOutlet UILabel * accountName;
+@property (nonatomic, strong) MBProgressHUD    * theHud;
 
 @end
 
@@ -44,10 +43,10 @@
 
 -(void)updateAccountName
 {
-    double delayInSeconds = 0.5;
+    double delayInSeconds   = 0.5;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-    _accountName.text = _localInstance.facebookAccount.userFullName;
+    _accountName.text       = _localInstance.facebookAccount.userFullName;
     });
 }
 
@@ -161,14 +160,14 @@
         // Create the SLRequest
         SLRequest *postToMyWall = ({
             // Create an NSURL pointing the correct open graph end point
-            NSURL *postURL = [NSURL URLWithString:@"https://graph.facebook.com/me/feed"];
-            
+            NSURL *postURL        = [NSURL URLWithString:@"https://graph.facebook.com/me/feed"];
+
             // Create the post details
-            NSString *link = @"https://github.com/theworkingbear/SocialFrameworkReference";
-            NSString *message = @"Testing Social Framework Reference for iOS 7";
-            NSString *picture = @"http://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/150px-Apple_logo_black.svg.png";
-            NSString *name = @"Social Framework";
-            NSString *caption = @"GitHub";
+            NSString *link        = @"https://github.com/theworkingbear/SocialFrameworkReference";
+            NSString *message     = @"Testing Social Framework Reference for iOS 7";
+            NSString *picture     = @"http://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/150px-Apple_logo_black.svg.png";
+            NSString *name        = @"Social Framework";
+            NSString *caption     = @"GitHub";
             NSString *description = @"The Social framework lets you integrate your app with supported social networking services. On iOS and OS X, this framework provides a template for creating HTTP requests. On iOS only, the Social framework provides a generalized interface for posting requests on behalf of the user.";
             
             // Create a dictionary of post elements
@@ -200,17 +199,17 @@
                     NSLog(@"Error message: %@", [error localizedDescription]);
                     [self showAlertViewWithString:[error localizedDescription]];
                 }
-                
+
                 if ([urlResponse statusCode] == 200) {
                     NSString *successMessage = @"The post has been made successfully.";
                     [self showAlertViewWithString:successMessage];
                 }
-                
+
                 if ([urlResponse statusCode] == 400) {
                     NSLog(@"The OAuth token has expired. Renewing Access Token.");
                     [_localInstance renewFacebookCredentials];
                 }
-                
+
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self hideHud];
                 });
@@ -239,10 +238,10 @@
 -(void)showHud
 {
     if (_theHud == nil) {
-        _theHud = [[MBProgressHUD alloc] init];
+    _theHud           = [[MBProgressHUD alloc] init];
     }
-    
-    _theHud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+
+    _theHud           = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     _theHud.labelFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:12.0];
     _theHud.labelText = @"Posting";
 }

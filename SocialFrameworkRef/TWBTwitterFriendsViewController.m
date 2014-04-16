@@ -16,9 +16,9 @@
 
 @property BOOL downloadComplete;
 @property int downloadCount;
-@property (nonatomic) NSMutableArray *downloadedImages;
+@property (nonatomic) NSMutableArray  *downloadedImages;
 @property (nonatomic) TWBSocialHelper *localInstance;
-@property (nonatomic) MBProgressHUD *theHud;
+@property (nonatomic) MBProgressHUD   *theHud;
 
 @end
 
@@ -53,19 +53,19 @@
  */
 -(void)downloadData
 {
-    _localInstance = [TWBSocialHelper sharedHelper];
+    _localInstance               = [TWBSocialHelper sharedHelper];
     [self showHud];
-    
-    NSURL *twitterFriendsURL = [NSURL URLWithString:@"https://api.twitter.com/1.1/friends/ids.json"];
-    
-    NSDictionary *requestParams = @{@"count": @"10"}; // The count key specifies the maximum amount of friends you wish to download in one request.
-    
+
+    NSURL *twitterFriendsURL     = [NSURL URLWithString:@"https://api.twitter.com/1.1/friends/ids.json"];
+
+    NSDictionary *requestParams  = @{@"count": @"10"};// The count key specifies the maximum amount of friends you wish to download in one request.
+
     // Create a request
     SLRequest *getFriendsRequest = [SLRequest requestForServiceType:SLServiceTypeTwitter
                                                       requestMethod:SLRequestMethodGET
                                                                 URL:twitterFriendsURL
                                                          parameters:requestParams];
-    
+
     [getFriendsRequest setAccount:_localInstance.twitterAccount];
     
     

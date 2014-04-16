@@ -11,8 +11,8 @@
 @interface TWBTwitterAccountCell : UITableViewCell
 
 @property (nonatomic, weak) IBOutlet UIImageView *currentlySelected;
-@property (nonatomic, weak) IBOutlet UILabel *fullName;
-@property (nonatomic, weak) IBOutlet UILabel *screenName;
+@property (nonatomic, weak) IBOutlet UILabel     *fullName;
+@property (nonatomic, weak) IBOutlet UILabel     *screenName;
 
 
 @end

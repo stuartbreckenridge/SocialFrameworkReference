@@ -39,11 +39,10 @@
 {
     UIActivityViewController *flickrController = ({
         // Get the UIImage
-        UIImage *flickrImage = [UIImage imageNamed:@"FlickrImage"];
-        NSString *imageString = @"I love satay!";
+        UIImage *flickrImage   = [UIImage imageNamed:@"FlickrImage"];
+        NSString *imageString  = @"I love satay!";
         NSArray *activityItems = @[flickrImage, imageString];
-        
-        flickrController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+        flickrController       = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
     
         flickrController.excludedActivityTypes = @[UIActivityTypePrint, UIActivityTypeCopyToPasteboard, UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll, UIActivityTypeAddToReadingList, UIActivityTypeMail, UIActivityTypeMessage, UIActivityTypePostToFacebook, UIActivityTypePostToTencentWeibo, UIActivityTypePostToTwitter, UIActivityTypePostToVimeo, UIActivityTypePostToWeibo, UIActivityTypeAirDrop];
         
