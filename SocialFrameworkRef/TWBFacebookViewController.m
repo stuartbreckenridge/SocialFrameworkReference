@@ -220,7 +220,6 @@
         
         // Memory Management
         postToMyWall = nil;
-        
     }
 }
 
