@@ -3,7 +3,7 @@
 //  SocialFrameworkRef
 //
 //  Created by Stuart Breckenridge on 10/10/2013.
-//  Copyright (c) 2013 TheWorkingBear. All rights reserved.
+//  Copyright (c) 2013 Stuart Breckenridge. All rights reserved.
 //
 
 #import "TWBFacebookViewController.h"
@@ -163,7 +163,7 @@
             NSURL *postURL        = [NSURL URLWithString:@"https://graph.facebook.com/me/feed"];
 
             // Create the post details
-            NSString *link        = @"https://github.com/theworkingbear/SocialFrameworkReference";
+            NSString *link        = @"https://github.com/Stuart Breckenridge/SocialFrameworkReference";
             NSString *message     = @"Testing Social Framework Reference for iOS 7";
             NSString *picture     = @"http://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/150px-Apple_logo_black.svg.png";
             NSString *name        = @"Social Framework";

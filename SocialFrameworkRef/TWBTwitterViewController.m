@@ -3,7 +3,7 @@
 //  SocialFrameworkRef
 //
 //  Created by Stuart Breckenridge on 10/10/2013.
-//  Copyright (c) 2013 TheWorkingBear. All rights reserved.
+//  Copyright (c) 2013 Stuart Breckenridge. All rights reserved.
 //
 
 #import "TWBTwitterViewController.h"
@@ -164,7 +164,7 @@
         NSURL *twitterPostURL = [[NSURL alloc] initWithString:@"https://api.twitter.com/1.1/statuses/update.json"];
         
         // Set the tweet message
-        NSDictionary *tweetDetails = @{@"status": @"This is a test tweet. Thanks #theworkingbear."};
+        NSDictionary *tweetDetails = @{@"status": @"This is a test tweet. Thanks #Stuart Breckenridge."};
         
         postTweetToTwitter = [SLRequest requestForServiceType:SLServiceTypeTwitter
                                                 requestMethod:SLRequestMethodPOST
@@ -208,7 +208,7 @@
         NSURL *twitterPostURL = [[NSURL alloc] initWithString:@"https://api.twitter.com/1.1/statuses/update_with_media.json"];
         
         // Set the tweet message
-        NSDictionary *tweetDetails = @{@"status": @"This is a test tweet. Thanks #theworkingbear."};
+        NSDictionary *tweetDetails = @{@"status": @"This is a test tweet. Thanks #Stuart Breckenridge."};
         
         // Get the image from the app bundle
         UIImage *image = [UIImage imageNamed:@"FlickrImage"];
